@@ -29,7 +29,7 @@ type Staff struct {
 }
 
 func (s *Staff) StatusofEmployment() string {
-	if s.Attendance > 20 {
+	if s.Attendance >= 20 {
 		return "Employment Active"
 	}
 	if s.Attendance >= 16 && s.Attendance < 20 {
