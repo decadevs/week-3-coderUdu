@@ -35,7 +35,7 @@ func (s *Staff) StatusofEmployment() string {
 	if s.Attendance >= 16 && s.Attendance < 20 {
 		return "Teacher on probation"
 	}
-	if s.Attendance < 16 {
+	if s.Attendance < 16 && s.Attendance > 1 {
 		return "Terminate Employment"
 	}
 	return ""
@@ -45,7 +45,7 @@ func (man *Nonteaching) Maintain() string {
 	if man.Power_supply_hours >= 5 {
 		return "maintained"
 	}
-	if man.Power_supply_hours < 5 {
+	if man.Power_supply_hours < 5 && man.Power_supply_hours > 1 {
 		return "Determine cause and fix"
 	}
 	return ""

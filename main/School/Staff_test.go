@@ -13,6 +13,7 @@ func TestStaff_StatusofEmployment(t *testing.T) {
 		{Staff{Attendance: 17}, "Teacher on probation"},
 		{Staff{Attendance: 14}, "Terminate Employment"},
 		{Staff{Attendance: 20}, "Employment Active"},
+		{Staff{Attendance: 0}, ""},
 	}
 	for _, v := range test {
 		got := v.input4.StatusofEmployment()
@@ -29,6 +30,7 @@ func TestNonteaching(t *testing.T) {
 	}{
 		{Nonteaching{Power_supply_hours: 4}, "Determine cause and fix"},
 		{Nonteaching{Power_supply_hours: 5}, "maintained"},
+		{Nonteaching{Power_supply_hours: 0}, ""},
 	}
 	for _, v := range test {
 		got := v.input5.Maintain()

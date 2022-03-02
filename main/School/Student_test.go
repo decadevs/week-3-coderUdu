@@ -12,6 +12,7 @@ func TestApplicant_Admit(t *testing.T) {
 	}{
 
 		{Applicant{Name: "Chucks", Examscore: 250, Age: 3}, "Not Admitted"},
+		{Applicant{Name: "Jimmy", Examscore: 180, Age: 3}, "Not Admitted"},
 		{Applicant{Name: "Steven Strange", Examscore: 241, Age: 6}, "Admitted"},
 	}
 	for _, v := range test {
